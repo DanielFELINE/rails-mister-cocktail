@@ -10,12 +10,14 @@
     <h1>Our <strong>magic</strong> cocktails</h1>
   </div>
 
-
 <div class="cards">
+<ul>
 <% @cocktails.each do |cocktail| %>
+  <li>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
   <%= link_to cocktail.name, cocktail_path(cocktail) %>
   <% end %>
   </div>
-
+</li>
+</ul>
 </div>

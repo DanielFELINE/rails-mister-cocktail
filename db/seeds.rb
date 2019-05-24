@@ -10,7 +10,7 @@ require 'json'
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
-Ingredient.destroy_all
+
 
 ingredients_serialized = open(url).read
 ingredients = JSON.parse(ingredients_serialized)
