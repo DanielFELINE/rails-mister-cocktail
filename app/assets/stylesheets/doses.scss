@@ -1,0 +1,10 @@
+// Place all the styles related to the doses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// pour mes cards cocktails...
+<div class="card" style="width: 18rem;">
+  <img url="(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+  </div>
+</div>
