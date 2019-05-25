@@ -1,14 +1,34 @@
-<h1><%= @cocktail.name %></h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<h2></h2>
+  <a class="navbar-brand" src="link_to cocktails_path">
+    <img src="https://res.cloudinary.com/dnivipvcl/image/upload/v1558724101/te%CC%81le%CC%81chargement_ssyihy.png" />
+</a>
+</div>
+<div class="container">
+
+<div class="card-product">
 <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-<h5>ingredients</h5>
-<ul>  
-<% @doses.each do |dose| %>
-      <li><%= dose.description %> of <%= dose.ingredient.name %>
-      <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?'} do %>
-        <i class="far fa-trash-alt"></i>
-      <% end %>
-      </li>
+  <div class="card-product-infos">
+  <h1><%= @cocktail.name %></h1>
+  <br>
+  <h5>composition</h5>
+  <ul> 
+  <% @doses.each do |dose| %>
+  <li><%= dose.description %> of <%= dose.ingredient.name %>
+  <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?'} do %>
+    <span><i class="far fa-trash-alt"></i></span>
   <% end %>
+  </li>
+<% end %>
 </ul>
+<div class="add-ingredient">
+<i class="fas fa-plus"><%= link_to ' Add an ingredient', new_cocktail_dose_path(@cocktail) %></i>
+  </div>
+</div>
+</div>
 <%= link_to 'Back to our cocktails', cocktails_path, class: 'btn btn-primary' %>
-<%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail) %>
+
+
+
+
+

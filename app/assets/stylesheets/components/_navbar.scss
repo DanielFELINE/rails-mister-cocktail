@@ -1,1 +1,20 @@
 /* Main navbar */
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px;
+  border-color: bisque;
+  margin-bottom: 24px;
+}
+
+.navbar-lewagon h1 {
+  font-weight: lighter;
+  font-family: 'Lato', sans-serif;
+}
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}

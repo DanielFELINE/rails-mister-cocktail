@@ -1,7 +1,16 @@
-<h1>New dose</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<h1>Add some ingredients to your cocktail <%= @cocktail.name %></h1>
+  <a class="navbar-brand" src="link_to cocktails_path">
+    <img src="https://res.cloudinary.com/dnivipvcl/image/upload/v1558724101/te%CC%81le%CC%81chargement_ssyihy.png" />
+</a>
+</div>
+
+<div class="container">
+<h1></h1>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.association :ingredient %>
   <%= f.input :description %>
-  <%= f.submit "Add dose", class: 'btn btn-primary' %>
+  <%= f.submit "Add ingredient", class: 'btn btn-primary' %>
 <% end %>
+</div>

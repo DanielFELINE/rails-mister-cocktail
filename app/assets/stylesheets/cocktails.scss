@@ -12,50 +12,129 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
 
+.add-ingredient a {
+  text-decoration: none;
+  color: rgb(190, 80, 80);
+  font-family: 'Muli', sans-serif;
+}
+
+li {
+  font-size: 16px;
+  font-weight: lighter;
+}
 .banner p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: 'Lato', sans-serif;
 }
 
+ul {
+  list-style: none;
+}
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  height: 300px;
   grid-gap: 16px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
+.btn-success {
+  background-color: rgba(164, 175, 175, 0.4);
+  color: white;
+  border: white;
+  &:hover {
+    background-color: rgba(164, 175, 175, 0.8);
+  }
+}
 
-.card-category {
+.card {
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: 300px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+  word-wrap: normal;
+  font-family: 'Muli', sans-serif;
   a {
     text-decoration: none;
     color: white;
     position: absolute;
     left: 30px;
     bottom: 30px;
-    width: 40px;
+    width: 250px;
   }
 }
 
+.card-product {
+  overflow: hidden;
+  height: 300px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
 
+.card-product img {
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+  border-left: 1px;
+  border-color: rgba(180, 180, 180, 0.4)
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-family: 'Muli', sans-serif;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+
+.btn-primary {
+  background-color: rgb(80, 80, 80);
+  border: none;
+  &:hover {
+    background-color: rgba(180, 180, 180, 0.8)
+  }
+}
+
+i {
+  color: rgb(80, 80, 80)
+}
+
+.body {
+  display: block;
+}
+.container h1 {
+  font-family: 'Lato', sans-serif;
+}
 
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

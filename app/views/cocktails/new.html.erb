@@ -1,4 +1,13 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<h1>Create your own cocktail</h1>
+  <a class="navbar-brand" src="link_to cocktails_path">
+    <img src="https://res.cloudinary.com/dnivipvcl/image/upload/v1558724101/te%CC%81le%CC%81chargement_ssyihy.png" />
+</a>
 
+
+</div>
+
+<div class="container">
 <%= simple_form_for @cocktail do |f| %>
 
 <%= f.input :name %>
@@ -6,3 +15,4 @@
 <%= f.input :photo_cache, as: :hidden %>
 <%= f.submit "Add cocktail", class: 'btn btn-primary' %>
 <% end %>
+</div>

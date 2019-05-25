@@ -4,8 +4,8 @@
 
   <div class="container">
     <h1>Mister cocktail</h1>
-    <p>Good cocktails</p>
-    <a class="btn btn-success" href="/cocktails/new">Create your cocktail</a>
+    <p>Passion for cocktails</p>
+    <a class="btn btn-success" href="/cocktails/new">Create your own cocktail</a>
   </div>
 </div>
   <div class="container">
@@ -16,8 +16,9 @@
   <% @cocktails.each do |cocktail| %>
     <div class="card"
     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill unless cocktail.photo.blank? %>')">
+           url('<%= cl_image_path cocktail.photo %>')">
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
     </div>
   <% end %>
 </div>
+
